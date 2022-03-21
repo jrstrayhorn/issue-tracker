@@ -13,4 +13,10 @@ export class IssuesService {
   getPendingIssues(): Issue[] {
     return this.issues.filter((issue) => !issue.completed);
   }
+
+  createIssue(issue: Issue) {
+    // would be better to use uuid to generate unique id
+    issue.issueNo = this.issues.length + 1;
+    this.issues.push(issue);
+  }
 }
