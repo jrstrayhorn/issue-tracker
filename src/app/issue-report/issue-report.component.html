@@ -1,0 +1,27 @@
+<h3>Report an issue</h3>
+<form clrForm *ngIf="issueForm" [formGroup]="issueForm">
+  <clr-input-container
+    ><label>Title</label><input clrInput formControlName="title"
+  /></clr-input-container>
+  <clr-textarea-container
+    ><label>Description</label
+    ><textarea clrTextarea formControlName="description"></textarea>
+  </clr-textarea-container>
+  <clr-radio-container>
+    <label for=""></label>
+    <clr-radio-wrapper
+      ><input type="text" /><label for=""></label
+    ></clr-radio-wrapper>
+    <clr-radio-wrapper
+      ><input type="text" /><label for=""></label
+    ></clr-radio-wrapper>
+  </clr-radio-container>
+  <clr-select-container
+    ><label for=""></label>
+    <select name="" id="">
+      <option value=""></option>
+      <option value=""></option>
+      <option value=""></option>
+    </select>
+  </clr-select-container>
+</form>
